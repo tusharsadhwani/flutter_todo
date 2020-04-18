@@ -7,8 +7,13 @@ class TodoItem extends StatefulWidget {
   final Function checkItem;
   final Function updateText;
 
-  TodoItem(this.data,
-      {this.checkItem, this.updateText, this.focusNode, this.focused});
+  TodoItem(
+    this.data, {
+    @required this.checkItem,
+    @required this.updateText,
+    @required this.focusNode,
+    @required this.focused,
+  });
 
   @override
   _TodoItemState createState() => _TodoItemState();
