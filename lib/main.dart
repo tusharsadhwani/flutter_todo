@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         primaryColor: Color(0xFF202239),
         scaffoldBackgroundColor: Color(0xFF202239),
+        canvasColor: Color(0xFF202239),
       ),
       title: 'TodoList',
       home: TodoList(),

@@ -36,14 +36,22 @@ class _TodoItemState extends State<TodoItem> {
 
   @override
   Widget build(BuildContext context) {
-    return CheckboxListTile(
-      value: widget.data['checked'],
-      title: TextField(
-        controller: _controller,
-        focusNode: widget.focusNode,
-        onChanged: widget.updateText,
-      ),
-      onChanged: (value) => widget.checkItem(value),
+    return Row(
+      children: [
+        Icon(Icons.menu, color: Colors.grey),
+        Expanded(
+          child: CheckboxListTile(
+            checkColor: Colors.black,
+            value: widget.data['checked'],
+            title: TextField(
+              controller: _controller,
+              focusNode: widget.focusNode,
+              onChanged: widget.updateText,
+            ),
+            onChanged: (value) => widget.checkItem(value),
+          ),
+        ),
+      ],
     );
   }
 }
