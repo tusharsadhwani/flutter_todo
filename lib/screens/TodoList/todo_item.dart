@@ -9,11 +9,12 @@ class TodoItem extends StatefulWidget {
 
   TodoItem(
     this.data, {
+    Key key,
     @required this.checkItem,
     @required this.updateText,
     @required this.focusNode,
     @required this.focused,
-  });
+  }) : super(key: key);
 
   @override
   _TodoItemState createState() => _TodoItemState();
